@@ -9,4 +9,5 @@
 - [x] Commenting in Assemly.
 - [x] Printing text.
 - [x] Summing numbers.
+- [ ] Write out all registers, operators etc.
 - [ ] More, coming soon.. 

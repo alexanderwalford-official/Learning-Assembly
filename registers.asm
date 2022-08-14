@@ -32,7 +32,6 @@
 
 
 ; Data Movement
-
 mov    ; Move source to destination (2 suffixes)
 push    ; Push source onto stack (2 suffixes)
 pop    ; Pop top of stack into destination (1 suffix)
@@ -80,44 +79,60 @@ divq S    ; Unsigned devide %rdx:%rax by S, quotient stored in %rax. Remainder s
 
 
 ; comparision and test instructions
-
 cmp A B    ; Set condition codes according to A - B
 test A B    ; Set condition code according to A & B 
 
 
 
 ; accessing condition codes (no suffixes)
-sete / setz    ; 
-setne / setnz    ; 
-sets    ; 
-setns    ; 
-setg / setnle    ; 
-setge / setnl    ; 
-setl / setnge    ; 
-setle / setnge    ; 
-seta / setnbe    ; 
-setb / setnae    ; 
-setbe / setna    ; 
+sete / setz    ; Set if equal/zero
+setne / setnz    ; Set if not equal/nonzero
+sets    ; Set if negative
+setns    ; Set if non-negative
+setg / setnle    ; Set if greater (signed)
+setge / setnl    ; Set if greater or equal (signed)
+setl / setnge    ; Set if less (signed)
+setle / setnge    ; Set if less or equal (signed)
+seta / setnbe    ; Set if above (unsigned)
+setb / setnae    ; Set if below (unsigned)
+setbe / setna    ; Set if below or equal (unsigned)
 
 
 
 ; jump instructions
-jmp    ; 
-je / jz    ; 
-jne / jnz    ; 
-js    ; 
-jns    ; 
-jg / jnle    ; 
-jge / jnl    ; 
-jl / jnge    ; 
-jle / jng    ; 
-ja / jnbe    ; 
-jae / jnb    ; 
-jb / jnae    ; 
-jbe / jna    ; 
+jmp    ; Jump to label
+je / jz    ; Jump to specified location
+jne / jnz    ; Jump if equal/zero
+js    ; Jump if negative
+jns    ; Jump if non-negative
+jg / jnle    ; Jump if greater (signed)
+jge / jnl    ; Jump if greater or equal (signed)
+jl / jnge    ; Jump if less (signed)
+jle / jng    ; Jump if less or equal
+ja / jnbe    ; Jump if above (unsigned)
+jae / jnb    ; Jump if above or equal (unsigned)
+jb / jnae    ; Jump if below (unsigned)
+jbe / jna    ; Jump if below or equal (unsigned)
 
 
 
 ; conditional move instructions
-cmove / cmovz    ; 
-cmovne / cmovzn    ; 
+cmove / cmovz    ; Move if equal/zero
+cmovne / cmovzn    ; Move if not equal/non-zero
+cmovs    ; Move if negative
+cmovns    ; Move if non-negative
+cmovg / cmovnle    ; Move if greater (signed)
+cmovge / cmovnl    ; Move if greater or equal (signed)
+cmovl / cmovnge    ; Move if less (signed) 
+cmovle / cmovng    ; Move if less or equal 
+cmova / cmovnbe    ; Move if above (unsigned)
+cmovae / cmovnb    ; Move if above or equal (unsigned)
+cmovb / cmovnae    ; Move if below (unsigned)
+cmovbe / cmovna    ; Move if below or equal (unsigned)
+
+
+
+; procedure call instruction
+call    ; Push return address and jump to label, push return address and jump to specified location
+leave    ; Set %rsp to %rbp, then pop top of stack into %rbp
+ret    ; Pop return address from stack and jump there

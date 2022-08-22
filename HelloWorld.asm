@@ -1,26 +1,16 @@
-; HelloWorld.asm
+section	.text
+global _start	 ;must be declared for linker (gcc)
+	
+_start:	         ;tell linker entry point
+mov	edx, len  ;message length
+mov	ecx, msg  ;message to write
+mov	ebx, 1    ;file descriptor (stdout)
+mov	eax, 4    ;system call number (sys_write)
+int	0x80     ;call kernel
 
-.global _start
-
-.hello.str:
-    ascii "12345678\n"
-
-.text
-
-_start:
-
-    movq %rsp, %rbp
-
-    ; write hello world
-    movq $l, %rax
-    movq $1, %rdi
-    leaq .hello.str, %rsi
-    movq $9, %rdi
-    syscall
-
-    ; exit
-    movq $60, %rax
-    movq $0, %rdi
-    syscall
-    
-    pop %rbp
+mov	eax, 1    ;system call number (sys_exit)
+int	0x80     ;call kernel
+	
+section	.data
+msg db 'Hello World',0xa ;a message
+len equ $ - msg  ;length of message

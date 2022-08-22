@@ -1,5 +1,5 @@
 # Learning Assembly
- It's time for me to challenge myself to learn some assmbly language! I'm taking you on this journey with me too..
+It's time for me to challenge myself and learn some assembly language! I'm taking you on this journey with me too..
 
 ## Useful Resources
 - Assembly cheat sheet: https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf

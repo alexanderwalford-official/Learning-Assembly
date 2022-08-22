@@ -10,5 +10,8 @@
 - [x] Printing text.
 - [x] Summing numbers.
 - [x] Write out all registers, operators etc.
-- [ ] Moving data between registers.
-- [ ] Mathematical operations.
+- [x] Moving data between registers.
+- [x] Mathematical operations.
+- [x] Custom variables.
+- [x] Custom Proceedures.
+- [x] Recursion

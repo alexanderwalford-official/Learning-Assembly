@@ -4,6 +4,7 @@ It's time for me to challenge myself and learn some assembly language! I'm takin
 ## Useful Resources
 - Assembly cheat sheet: https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
 - Getting started: https://www.inf.usi.ch/faculty/soule/teaching/2015-fall/cc/x64-intro.pdf
+- NASM Documentation: https://www.tutorialspoint.com/assembly_programming/index.htm
 
 ## Things To Cover
 - [x] Commenting in Assemly.

@@ -16,3 +16,4 @@ It's time for me to challenge myself and learn some assembly language! I'm takin
 - [x] Custom variables.
 - [x] Custom Proceedures.
 - [x] Recursion
+- [ ] More, coming soon..
